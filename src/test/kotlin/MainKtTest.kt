@@ -7,10 +7,10 @@ class MainKtTest {
     @Test
     fun cardType1() {
         val card = "VK Pay"
-        val amountOfPreviousTransfers = 1_000
+        val amountOfPreviousTransfers = 2_000
         val transferAmount = 16_000
         val result = cardType(card, amountOfPreviousTransfers, transferAmount)
-        assertEquals(0, result)
+        assertEquals("Карта заблокирована", result)
     }
 
     @Test
